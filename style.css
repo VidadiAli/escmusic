@@ -1,0 +1,441 @@
+.main>main {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: calc(var(--leftSide) + 5px);
+    width: calc(100% - var(--leftSide) - 5px);
+    background-color: var(--color1);
+    border-radius: 10px;
+    padding: 0 0 20px;
+}
+
+.main>main>h1 {
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+    position: sticky;
+    top: 241px;
+    background-color: #034E91;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main>main>.background-for-artist {
+    display: none;
+    width: 100%;
+    height: auto;
+    padding: 100px 20px;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    position: relative;
+    z-index: 0;
+    font-family: sans-serif;
+    background-position: 0% -50px;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+.main>main>.background-for-artist::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(3, 95, 176, 0) 30%, rgba(3, 95, 176, 1));
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.main>main>.background-for-artist::after {
+    content: '';
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(3, 95, 176, .0) 5%, rgba(3, 95, 176, 1));
+    position: absolute;
+    left: 0%;
+    z-index: -1;
+}
+
+.main>main>section {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    grid-template-rows: 1fr;
+    width: 100%;
+    padding: 20px;
+}
+
+.main>main>section>div {
+    background-color: rgba(2, 32, 58, 0.3);
+    box-shadow: 0 0px 3px 0px var(--color1);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: .1s;
+    width: 100%;
+}
+
+.main>main>section>div:hover {
+    background-color: rgba(2, 32, 58, 0.5);
+}
+
+.main>main>section>div::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(-45deg, rgba(2, 32, 58, 0.3), var(--color3), rgba(2, 32, 58, 0.3));
+    box-shadow: 0 0 100px 100px rgba(2, 32, 58, 0.3);
+    border-radius: 0px 10px 0px 50%;
+}
+
+.main>main>section>div>div {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.main>main>section>div>div>img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.main>main>section>div>.eurovision-music::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: pink;
+}
+
+.main>main>section>div>.eurovision-music::after {
+    content: '';
+    position: absolute;
+    top: 33%;
+    right: 5px;
+    width: 10px;
+    height: 90px;
+    background-color: pink;
+}
+
+.main>main>section>div>.winner::before {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    right: -180%;
+    width: 300%;
+    height: 60%;
+    rotate: -45deg;
+    background-color: rgb(110, 242, 254);
+}
+
+.main>main>section>div>.winner::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: -140%;
+    width: 200%;
+    height: 40%;
+    rotate: 45deg;
+    background-color: var(--color2);
+}
+
+.main>main>section>div>a {
+    color: lightgray;
+    text-decoration: none;
+    font-size: .85rem;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.main>main>section>div>.mainBoxChildNameOfMusic {
+    color: white;
+    font-size: 1.075rem;
+    font-weight: 700;
+}
+
+.main>main>section>div>a:hover {
+    text-decoration: underline;
+}
+
+.main>main>section>div>.mainBoxChildNameOfMusic:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+.main>main>section>div>i {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+    background-color: var(--color1);
+    color: var(--color2);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main>main>section>div>i:hover {
+    background-color: var(--darkColor);
+}
+
+
+.main>main>.for-artist {
+    display: flex;
+    flex-direction: column;
+}
+
+.main>main>.for-artist>div {
+    flex-direction: row;
+    gap: 10px;
+}
+
+.main>main>.for-artist>div::before {
+    display: none;
+}
+
+.main>main>.for-artist>div>div {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.main>main>.for-artist>div>.eurovision-music::after {
+    height: 50px;
+    width: 5px;
+}
+
+.main>main>.for-artist>div>.eurovision-music::before {
+    height: 5px;
+}
+
+.main>main>.for-artist>div>a {
+    display: none;
+}
+
+.main>main>.for-artist>div>.mainBoxChildNameOfMusic {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    font-weight: 900;
+    width: auto;
+}
+
+.main>main>.for-artist>div>i {
+    bottom: 50%;
+    left: 40px;
+    transform: translateY(50%);
+    width: 40px;
+    height: 40px;
+    font-size: 100%;
+    visibility: hidden;
+}
+
+.main>main>.for-artist>div:hover>i {
+    visibility: visible;
+}
+
+
+
+
+
+@media(max-width: 1400px) {
+    .main>main>section {
+        grid-template-columns: 23% 23% 23% 23%;
+        justify-content: space-around;
+    }
+}
+
+
+
+@media(max-width: 1200px) {
+    .main>main>.background-for-artist {
+        background-size: 60%;
+    }
+
+    .main>main>.background-for-artist::after {
+        width: 60%;
+    }
+
+    .main>main>section>div>i {
+        width: 50px;
+        height: 50px;
+        bottom: 65px;
+        font-size: 2.2rem;
+    }
+}
+
+
+
+@media(max-width: 1000px) {
+    .main>main>h1 {
+        top: 189px;
+    }
+
+    .main>main>.for-artist>div>div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .main>main>.for-artist>div>i {
+        left: 30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .main>main>.for-artist>div>.mainBoxChildNameOfMusic {
+        font-size: 1rem;
+    }
+
+    .main>main>.for-artist>div>.eurovision-music::after {
+        height: 35px;
+    }
+}
+
+
+@media(max-width: 860px) {
+    .main>main>.background-for-artist {
+        background-size: 90%;
+    }
+
+    .main>main>.background-for-artist::after {
+        width: 92%;
+    }
+
+    .main>main>section {
+        gap: 0;
+        grid-template-columns: 32% 32% 32%;
+    }
+
+    .main>main>section>div {
+        margin: 5px 0;
+    }
+}
+
+
+@media(max-width: 700px) {
+    .main>main>.background-for-artist {
+        background-size: 98%;
+    }
+
+    .main>main>.background-for-artist::after {
+        width: 100%;
+    }
+
+    .main>main {
+        left: 0;
+        width: 100%;
+        padding-bottom: 110px;
+    }
+
+    .main>main>section>div>.eurovision-music::after {
+        top: 25%;
+        height: 70px;
+        width: 6px;
+    }
+
+    .main>main>section>div>.eurovision-music::before {
+        height: 6px;
+    }
+}
+
+
+
+@media(max-width: 550px) {
+    .main>main>h1 {
+        font-size: 1.3rem;
+        padding: 10px 20px;
+    }
+
+    .main>main>.background-for-artist {
+        font-size: 2.8rem;
+    }
+
+    .main>main>section {
+        grid-template-columns: 32% 32% 32%;
+        padding: 8px;
+    }
+
+    .main>main>section>div {
+        padding: 8px;
+        margin: 4px 0;
+    }
+
+    .main>main>section>div>i {
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+        bottom: 50px;
+    }
+
+    .main>main>section>div>a {
+        font-size: .65rem;
+    }
+
+    .main>main>section>div>.mainBoxChildNameOfMusic {
+        font-size: .85rem;
+    }
+
+    .main>main>section>div>div {
+        margin-bottom: 25px;
+    }
+
+    .main>main>.for-artist {
+        gap: 5px;
+    }
+
+    .main>main>.for-artist>div {
+        padding: 5px;
+    }
+
+    .main>main>.for-artist>div>div {
+        width: 60px;
+        height: 60px;
+    }
+
+    .main>main>.for-artist>div>.eurovision-music::after {
+        top: 33%;
+        height: 28px;
+        width: 4px;
+    }
+
+    .main>main>section>div>.eurovision-music::after {
+        top: 23%;
+        height: 63px;
+    }
+
+    .main>main>.for-artist>div>.eurovision-music::before {
+        height: 4px;
+    }
+
+    .main>main>.for-artist>div>i {
+        left: 23.5px;
+        width: 23.5px;
+        height: 23.5px;
+    }
+}
