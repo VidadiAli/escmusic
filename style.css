@@ -65,7 +65,8 @@
 .main>main>section {
     display: grid;
     gap: 15px;
-    grid-template-columns: 18% 18% 18% 18% 18%;
+    grid-template-columns: 18.5% 18.5% 18.5% 18.5% 18.5%;
+    justify-content: space-around;
     grid-template-rows: 1fr;
     width: 100%;
     padding: 20px;
