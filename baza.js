@@ -249,7 +249,7 @@ const arrayOfMusic = [
     {
         id: 18,
         artist: 'Nemo',
-        music: "dance with me",
+        music: "Dance With Me",
         coverOfArtist: 'https://i.scdn.co/image/ab676161000051741299b2438ba3eaab545145f7',
         coverOfMusic: 'https://i.scdn.co/image/ab67616d00001e02604405555c4d15dcf6ec3e9b',
         linkOfMusic: 'mp3/nemo - dance with me.mp3',
