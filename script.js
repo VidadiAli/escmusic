@@ -308,9 +308,8 @@ searchMainElement.addEventListener('click', (e) => {
 
 
 musicForLeft.addEventListener('click', (e) => {
-
-    musicForLeft.append(removeMobile);
     if (window.innerWidth < 700 && !e.target.className.includes('bx')) {
+        musicForLeft.append(removeMobile);
         removeMobile.style.display = 'block';
         leftFixed.classList.add('music-mobile');
     }
