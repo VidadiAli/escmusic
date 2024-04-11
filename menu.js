@@ -255,11 +255,32 @@ const musicForLeftBefore = document.createElement('p');
 musicForLeftBefore.style = "height: 100vh; color: white; font-size: 300%; font-weight: 900; display: flex; justify-content: center; padding-top: 100px; width: 100%; text-align: center;";
 musicForLeftBefore.textContent = "Your playList";
 musicForLeft.append(musicForLeftBefore);
+
 let randomForAllMusic1 = 1;
 
 const leftFunc = (arr, playPausa, photoOfMusic, nameOfMusic, nameOfArtist, linkOfAudio, arrayOfAudio2, audioLength, photoOfArtist, year, country, gender, listOfRandomForAllMusic1) => {
+
+
     musicForLeft.innerHTML = "";
     musicForLeft.style.height = "auto";
+
+
+
+    // let c = 0
+    // let autoPlayT = setInterval(autoPlay, audioLength * 1000);
+    // function autoPlay() {
+    //     c++
+    //     console.log(c);
+    //     randomForAllMusic1++;
+    //     if (randomForAllMusic1 === listOfRandomForAllMusic1.length - 1) {
+    //         randomForAllMusic1 = 0;
+    //     }
+    //     audioLength = arrayOfAudio2[randomForAllMusic1];
+    //     leftFunc(arr, 'bx bx-pause', arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].coverOfMusic, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].music, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].artist, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].linkOfMusic, arrayOfAudio2, audioLength,
+    //         arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].coverOfArtist, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].year, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].country, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].gender, listOfRandomForAllMusic1);
+    // }
+
+
 
 
     const musicForLeftImageBox = document.createElement('div');
@@ -353,6 +374,15 @@ const leftFunc = (arr, playPausa, photoOfMusic, nameOfMusic, nameOfArtist, linkO
                 wayFront2 = 0;
                 musicReactPlayPausa.className = 'bx bx-play';
                 clearInterval(startInterval);
+
+                randomForAllMusic1++;
+                if (randomForAllMusic1 === listOfRandomForAllMusic1.length - 1) {
+                    randomForAllMusic1 = 0;
+                }
+                audioLength = arrayOfAudio2[randomForAllMusic1];
+                leftFunc(arr, 'bx bx-pause', arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].coverOfMusic, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].music, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].artist, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].linkOfMusic, arrayOfAudio2, audioLength,
+                    arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].coverOfArtist, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].year, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].country, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].gender, listOfRandomForAllMusic1);
+
             }
         }
     }
@@ -392,10 +422,10 @@ const leftFunc = (arr, playPausa, photoOfMusic, nameOfMusic, nameOfArtist, linkO
 
     musicForLeft.append(musicForLeftImageBox, musicForLeftNameMusic, musicForLeftNameArtists);
 
-    
+
 
     const callDuet = (nameOfArtistFromFunc, photoOfArtistFromFunc, arr) => {
-        
+
         const line = document.createElement('hr');
         const musicForLeftCoverBox = document.createElement('div');
         musicForLeftCoverBox.className = 'music-box-for-image second-image';
@@ -469,19 +499,6 @@ const leftFunc = (arr, playPausa, photoOfMusic, nameOfMusic, nameOfArtist, linkO
                 arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].coverOfArtist, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].year, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].country, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].gender, listOfRandomForAllMusic1);
         }
     });
-
-
-    // const autoPlayT = setInterval(autoPlay, audioLength*1000);
-    // function autoPlay() {
-    //     randomForAllMusic1++;
-    //     if (randomForAllMusic1 === listOfRandomForAllMusic1.length - 1) {
-    //         randomForAllMusic1 = 0;
-    //     }
-    //     audioLength = arrayOfAudio2[randomForAllMusic1];
-    //     leftFunc(arr, 'bx bx-pause', arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].coverOfMusic, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].music, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].artist, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].linkOfMusic, arrayOfAudio2, audioLength,
-    //         arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].coverOfArtist, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].year, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].country, arr[Number(listOfRandomForAllMusic1[randomForAllMusic1])].gender, listOfRandomForAllMusic1);
-    // }
-
 }
 
 
